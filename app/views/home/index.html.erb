@@ -1,2 +1,35 @@
-<h1>Hello World</h1>
-<p></p>
+<style>
+  body {
+    background-image: url('https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJpZW5kc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1080&q=60');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+ <div> 
+ <br />
+    <div style="font-family: Arial, sans-serif;" class="text-center">
+        <h3>Friendship is the golden thread that ties the heart of all the world</h3>
+        <h4>John Evelyn</h4>
+        <br />
+        <h3>I don't have friends... I have family. </h3>
+        <h4>Vin Diesel</h4>
+        <br />
+        <h3>Family is the one that we choose. </h3>
+        <h4>Swirly</h4>
+    </div>
+    <br />
+    <% if !user_signed_in? %>
+    <%= link_to "Login", new_user_session_path, class:'btn btn-outline-primary btn-lg 
+    position-absolute top-50 start-50 translate-middle' %>
+    <% end %>
+ </div> 
+</body>
+
+
+
+

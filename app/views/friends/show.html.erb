@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
 
 <div class="jumbotron">
 
 <h4 class="d-block p-2 "> <%= render @friend %> </h4>
-<hr class="my-4">
 
 <div>
 <%= link_to "Edit this friend", edit_friend_path(@friend), class:'btn btn-secondary' %>
 <%= link_to "Back to friends", friends_path, class:'btn btn-dark' %>
-<br/>
-<%= button_to "Cut-off", @friend, method: :delete, class:'btn btn-light text-danger' %>
 </div>
+<br/>
+<%= button_to "Cut-off", @friend, method: :delete, class:'btn btn-outline-danger' %>
 </div>

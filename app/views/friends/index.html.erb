@@ -1,12 +1,19 @@
-<p style="color: green"><%= notice %></p>
 
-<div id="friends">
-  <% @friends.each do |friend| %>
-    <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend, class:'btn btn-secondary' %>
-    </p>
-    <hr class="my-4">
-  <% end %>
-</div>
+<% if user_signed_in? %>
+  <div id="friends">
+    <% @friends.each do |friend| %>
+    <% if friend.user == current_user %>
+      <%= render friend %>
+      <p>
+        <%= link_to "Show this friend", friend, class:'btn btn-secondary' %>
+      </p>
+      <hr class="my-4">
 
+    <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to "Add friends", new_friend_path, class:'btn btn-secondary' %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, class:'btn btn-secondary' %>
+<% end %>
